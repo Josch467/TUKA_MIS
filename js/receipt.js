@@ -33,7 +33,7 @@ export function buildReceiptText({
     line(`Reservation #: ${reservation.reservationNo}`),
     line(`Guest: ${reservation.reservedBy}`),
     line(`Contact: ${reservation.contactNo || "—"}`),
-    line(`Date: ${reservation.reservationDate}`),
+    line(`Res Date: ${reservation.reservationDate}`),
     line(`Stay: ${reservation.stayType}${reservation.stayType === "Overnight" ? ` (${reservation.duration || 1} night/s)` : ""}`),
     line(`Status: ${reservation.status}`),
     hr,
@@ -69,6 +69,7 @@ export function buildReceiptText({
     line(`Processed by: ${processedBy || "—"}`),
     line(new Date().toLocaleString()),
     line("Thank you for visiting Tuka Marine Park")
+    line("Our Home, Your Paradise")
   );
   return rows.join("\n");
 }
