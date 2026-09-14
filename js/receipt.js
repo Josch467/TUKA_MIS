@@ -68,7 +68,7 @@ export function buildReceiptText({
     hr,
     line(`Processed by: ${processedBy || "—"}`),
     line(new Date().toLocaleString()),
-    line("Thank you for visiting Tuka Marine Park")
+    line("Thank you for visiting Tuka Marine Park"),
     line("Our Home, Your Paradise")
   );
   return rows.join("\n");
